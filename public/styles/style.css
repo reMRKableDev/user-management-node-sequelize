@@ -1,0 +1,123 @@
+*,
+body {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  background-color: #c10000;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.site-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.site-title,
+.populate-span {
+  text-decoration: underline;
+}
+
+.site-description {
+  width: 50%;
+}
+
+.site-description,
+.populate-form {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.button {
+  background-color: #c10000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.users {
+  width: 50%;
+  margin: 10px 0;
+  border: 2px solid #000;
+  padding: 5px;
+}
+
+.users span {
+  color: #c10000;
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+  .site-description {
+    width: 100%;
+  }
+
+  .users {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .site-description {
+    width: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Management</title>
+
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <a href="/">Home</a>
+        <a href="/users">All users</a>
+    </nav>
+
+    <main class="site-content">
+        <%if(users.length === 0){%>
+
+        <p>There are no users in our database yet! Please populate it first</p>
+        <a href="/" class="button">Home</a>
+
+        <%} else {%>
+
+        <p>The database is populated! Here are the users:</p>
+
+        <%users.forEach(user => {%>
+        <div class="users">
+            <p><span>Name:</span> <%=user.name%></p>
+            <p><span>Username:</span> <%=user.username%></p>
+            <p><span>Email:</span> <%=user.email%></p>
+            <p><span>Address:</span> <%=user.address%></p>
+            <p><span>Phone:</span> <%=user.phone%></p>
+            <p><span>Website:</span> <%=user.website%></p>
+            <p><span>Company Name:</span> <%=user.companyName%></p>
+
+        </div>
+        <%})%>
+        <%}%>
+    </main>
+
+</body>
+
+</html>
