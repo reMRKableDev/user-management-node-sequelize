@@ -21,6 +21,15 @@ module.exports = {
       });
   },
   getUsers: (req, res) => {
-    helperFunctions.findUsers(res);
+    helperFunctions.findAllUsers(res);
+  },
+  getSearch: (req, res) => {
+    res.render("search");
+  },
+  postSearchUser: (req, res) => {
+    helperFunctions.searchUser(req, res);
+  },
+  getResults: (req, res) => {
+    res.redirect("/");
   }
 };

@@ -1,3 +1,4 @@
+require("dotenv").config();
 /* Database required modules. */
 const { connector } = require("./database/config/dbConfig");
 
@@ -24,6 +25,9 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", routesController.getHome);
 app.post("/", routesController.postAxiosCall);
 app.get("/users", routesController.getUsers);
+app.get("/search", routesController.getSearch);
+app.post("/search", routesController.postSearchUser);
+app.get("/results", routesController.getResults);
 
 /* Connect database to app when app is fired up. */
 connector

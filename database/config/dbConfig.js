@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 
 const connector = new Sequelize(
   process.env.DB_NAME,
@@ -21,4 +22,4 @@ connector
     console.error(`Couldn't connect to the database: ${error.stack}`)
   );
 
-module.exports = { connector, Sequelize };
+module.exports = { connector, Sequelize, Op };

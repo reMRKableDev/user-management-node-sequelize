@@ -20,16 +20,7 @@
     </nav>
 
     <main class="site-content">
-        <%if(users.length === 0){%>
-
-        <p>There are no users in our database yet! Please populate it first</p>
-        <a href="/" class="button">Home</a>
-
-        <%} else {%>
-
-        <p>The database is populated! Here are the users:</p>
-
-        <%users.forEach(user => {%>
+        <p>Found your user!</p>
         <div class="users">
             <p><span>Name:</span> <%=user.name%></p>
             <p><span>Username:</span> <%=user.username%></p>
@@ -38,10 +29,10 @@
             <p><span>Phone:</span> <%=user.phone%></p>
             <p><span>Website:</span> <%=user.website%></p>
             <p><span>Company Name:</span> <%=user.companyName%></p>
-
         </div>
-        <%})%>
-        <%}%>
+
+        <a href="/search" class="button">Search</a>
+        <a href="/" class="button">Home</a>
     </main>
 
 </body>
